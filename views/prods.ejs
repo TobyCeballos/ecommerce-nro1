@@ -1,0 +1,28 @@
+<div class="pad">
+    <div class="container__product">
+        <div class="table-wrapper">
+            <% if(objetos.length > 0){%>
+            <table class="fl-table">
+                <div class="fixed">
+                    <thead><tr><th>Id</th><th>Thumbnail</th><th>Name</th><th>Price</th></tr></thead>
+                </div>
+
+                <tbody id="product">
+                    <% for (const objeto of objetos) { %>
+                        <tr>
+                            <td><%=objeto.id%></td>
+                            <td> <img src="<%=objeto.thumbnail%>" height="50px"></td>
+                            <td><%=objeto.name%></td>
+                            <td><%=objeto.price%></td>
+                        </tr>
+                    <%};%>
+                <tbody>
+            </table>
+            <% } else{%>
+                <h3 class="alert alert-danger">No se encontraron productos :/</h3>
+            <% } %>
+            
+        </div>
+    </div>
+
+</div>

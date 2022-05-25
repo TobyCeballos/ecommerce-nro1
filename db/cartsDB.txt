@@ -1,0 +1,16 @@
+[
+  {
+    "productos": [
+      [
+        {
+          "name": "Ladrillo hueco del 12",
+          "price": 63,
+          "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_662504-MLA31623294488_072019-O.jpg",
+          "id": 2
+        }
+      ]
+    ],
+    "timestamp": "Wed May 25 2022 18:27:23 GMT-0300 (hora estándar de Argentina)",
+    "id": 1
+  }
+]

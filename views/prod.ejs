@@ -1,0 +1,29 @@
+
+        
+        <div class="table-wrapper">
+            <% if(objetos.length > 0){%>
+            <table class="fl-table">
+                <div class="fixed">
+                    <thead><tr><th>Id</th><th>Thumbnail</th><th>Name</th><th>Descripcion</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+                </div>
+
+                <tbody id="product">
+                    <% for (const objeto of objetos) { %>
+                        <tr>
+                            <td><%=objeto.id%></td>
+                            <td> <img src="<%=objeto.thumbnail%>" height="50px"></td>
+                            <td><%=objeto.name%></td>
+                            <td><%=objeto.descripcion%></td>
+                            <td>$ <%=objeto.price%></td>
+                            <td><%=objeto.stock%></td>
+                            <td><form action="/api/productos/d/<%=objeto.id%>" method="delete"><button type="submit">Delete</button></form></td>
+                        </tr>
+                    <%};%>
+                <tbody>
+            </table>
+            <% } else{%>
+                <h3 class="alert alert-danger">No se encontraron productos :/</h3>
+            <% } %>
+            
+        </div>
+<script src="main.js"></script>
